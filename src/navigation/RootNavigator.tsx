@@ -2,10 +2,11 @@ import {AuthStack} from './stacks/AuthStack';
 import {ChatStack} from './stacks/ChatStack';
 import {View, ActivityIndicator, StyleSheet} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
-import {useUser} from '../hooks/useUser';
+import {useSelector} from 'react-redux';
+import {RootState} from '../store';
 
 export function RootNavigator() {
-  const {user, isLoading} = useUser();
+  const {user, isLoading} = useSelector((state: RootState) => state.auth);
 
   if (isLoading) {
     return (
