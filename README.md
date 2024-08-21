@@ -10,9 +10,7 @@
 
 ### Step 1: Provide a .env file with valid credentials
 
-First, you need to create/add a **.env** file which contains all the necessary _credentials_ for Firebase. This file should be existed at the _root_ of the project.
-
-I will be providing these credentials at the email that I sent. That is all you need to do for this step.
+First, you need to create a **.env** file which contains all the necessary _credentials_ for Firebase. This file should be existed at the _root_ of the project.
 
 ```js
 API_KEY=
@@ -23,7 +21,7 @@ MESSAGING_SENDER_ID=
 APP_ID=
 ```
 
-However, if you would like to work with your own database, you should create a new project from Firebase, enable email-password authentication and create a Firestore database. After that, you should fill the below env variables with values that provided by Firebase.
+If you would like to work with your own database, you should create a new project from Firebase, enable email-password authentication and create a Firestore database. After that, you should fill the below env variables with values that provided by Firebase.
 
 ### Step 2: Start your Application
 
