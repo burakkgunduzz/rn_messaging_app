@@ -25,6 +25,12 @@ If you would like to work with your own database, you should create a new projec
 
 ### Step 2: Start your Application
 
+Run the following command to install packages:
+
+```bash
+npm install
+```
+
 Run the following command to start your _Android_ or _iOS_ app:
 
 ```bash
