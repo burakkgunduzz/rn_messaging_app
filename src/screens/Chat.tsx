@@ -1,6 +1,11 @@
 import {useState, useCallback} from 'react';
 import {StyleSheet, Image, Text} from 'react-native';
-import {GiftedChat, IMessage, Bubble} from 'react-native-gifted-chat';
+import {
+  GiftedChat,
+  IMessage,
+  Bubble,
+  InputToolbar,
+} from 'react-native-gifted-chat';
 import {collection, addDoc} from 'firebase/firestore';
 import {auth, database} from '../config/firebase';
 import {useChatMessages} from '../hooks/useChatMessages';
@@ -46,6 +51,12 @@ export default function Chat() {
           }}
         />
       )}
+      renderInputToolbar={props => (
+        <InputToolbar
+          containerStyle={styles.messageInputContainer}
+          {...props}
+        />
+      )}
       renderAvatar={() => <Image source={avatarIcon} style={styles.avatar} />}
       onSend={latestMessages => onSend(latestMessages)}
       messagesContainerStyle={styles.messagesContainerStyle}
@@ -67,5 +78,8 @@ const styles = StyleSheet.create({
   message_sender: {
     color: colors.gray,
     marginLeft: 12,
+  },
+  messageInputContainer: {
+    paddingHorizontal: 12,
   },
 });
